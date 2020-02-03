@@ -1,0 +1,101 @@
+:root {
+  --text-color: #000217;
+  --bg-color: #fff;
+  --test-second: #d4d4d4;
+  --accent: #2e3ab3;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.wrapper {
+  margin: 0.5rem;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+}
+
+.main-title {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+}
+
+.number-wrapper {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.underscores {
+  text-align: center;
+  position: relative;
+  top: -0.1em;
+  user-select: none;
+}
+
+.underscores .underscore {
+  display: inline-block;
+  background-color: black;
+  width: 1em;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  background-color: var(--accent);
+}
+
+.underscores .underscore .hint {
+  text-align: center;
+  position: relative;
+  top: -0.8em;
+  font-size: 0.5em;
+  margin-top: 0.1em;
+  color: var(--test-second);
+}
+
+#binary {
+  margin: 0;
+  color: var(--accent);
+  word-spacing: 0.4em;
+}
+
+.main-input-holder {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.main-input {
+  position: absolute;
+  width: 6em;
+  left: 50%;
+  top: 0.5em;
+  font-size: 0.75em;
+  transform: translateX(-50%);
+  border: none;
+  text-align: center;
+  border-bottom: solid var(--test-second) 1px;
+  appearance: textfield;
+}
+.main-input:focus {
+  outline: none;
+}
+.main-input::-webkit-inner-spin-button,
+.main-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
