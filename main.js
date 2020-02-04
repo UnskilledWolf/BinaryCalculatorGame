@@ -13,18 +13,25 @@ MAIN_INPUT.addEventListener('keyup', (e) =>
 {
     if (e.keyCode === 13) //Only respond to enter
     {
+        //Clear Animation
+        BINARY_DISPLAY.classList.remove("correct")
+        MAIN_INPUT.classList.remove("incorrect")
+        BINARY_DISPLAY.classList.remove("incorrect")
+
         e.preventDefault()
 
         //Validate Result
         if (e.target.value == readBinary(currentNumber))
         {
-            alert("Correct")
             e.target.value = ""
             updateNumber()
+
+            BINARY_DISPLAY.classList.add("correct")
         }
         else 
         {
-            alert("Incorrect")
+            MAIN_INPUT.classList.add("incorrect")
+            BINARY_DISPLAY.classList.add("incorrect")
         }
     }
 })

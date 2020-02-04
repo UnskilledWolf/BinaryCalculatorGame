@@ -73,6 +73,36 @@ body {
   word-spacing: 0.4em;
 }
 
+/* Incorrect animation */
+.incorrect {
+  color: var(--accent);
+
+  animation: incorrect-animation 0.5s cubic-bezier(0.19, 1, 0.22, 1) 2 alternate none;
+}
+@keyframes incorrect-animation {
+  from {
+    color: var(--accent);
+  }
+  to {
+    color: #b32e2e;
+  }
+}
+
+/* Correct animation */
+.correct {
+  color: var(--accent);
+
+  animation: correct-animation 0.5s cubic-bezier(0.19, 1, 0.22, 1) 2 alternate none;
+}
+@keyframes correct-animation {
+  from {
+    color: var(--accent);
+  }
+  to {
+    color: #2eb36e;
+  }
+}
+
 .main-input-holder {
   position: relative;
   width: 100%;
