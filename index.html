@@ -12,6 +12,7 @@
 
 <body>
     <div class="wrapper">
+        <!-- Main -->
         <h1 class="main-title">Binary Calculator Game</h1>
         <div class="number-wrapper">
             <p id="binary">0 0 0 0 0</p>
@@ -26,6 +27,47 @@
             <div class="main-input-holder">
                 <input type="number" name="main-input" id="main-input" class="main-input">
             </div>
+        </div>
+
+        <!-- Settings -->
+        <div id="open-setting">
+            <div class="icon-holder">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <div class="settings-window" style="display: none;">
+            <h3>Settings</h3>
+            <form id="settings-form">
+                <table class="form-section">
+                    <tr>
+                        <td>Timer</td>
+                        <td><input type="checkbox" name="timer-toggle" id="timer-toggle"></td>
+                    </tr>
+                    <tr>
+                        <td>Auto Increase Speed</td>
+                        <td><input type="checkbox" name="timer-autospeed-toggle" id="timer-autospeed-toggle"></td>
+                    </tr>
+                    <tr>
+                        <td>Static Speed</td>
+                        <td><input type="number" name="timer-static" id="timer-static"></td>
+                    </tr>
+                </table>
+
+                <table class="form-section">
+                    <tr>
+                        <td>Dark Theme</td>
+                        <td><input type="checkbox" name="dark-theme-toggle" id="dark-theme-toggle"></td>
+                    </tr>
+                    <tr>
+                        <td>Hints</td>
+                        <td><input type="checkbox" name="hint-toggle" id="hint-toggle"></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Save">
+            </form>
         </div>
     </div>
 

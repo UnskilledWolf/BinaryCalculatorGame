@@ -1,7 +1,7 @@
 :root {
   --text-color: #000217;
   --bg-color: #fff;
-  --test-second: #d4d4d4;
+  --text-second: #d4d4d4;
   --accent: #2e3ab3;
 }
 
@@ -20,6 +20,7 @@ body {
   margin: 0.5rem;
   width: calc(100% - 1rem);
   height: calc(100% - 1rem);
+  background-color: var(--bg-color);
 }
 
 .main-title {
@@ -40,6 +41,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 2.5em;
+  white-space: nowrap;
 }
 
 .underscores {
@@ -64,7 +66,7 @@ body {
   top: -0.8em;
   font-size: 0.5em;
   margin-top: 0.1em;
-  color: var(--test-second);
+  color: var(--text-second);
 }
 
 #binary {
@@ -118,7 +120,7 @@ body {
   transform: translateX(-50%);
   border: none;
   text-align: center;
-  border-bottom: solid var(--test-second) 1px;
+  border-bottom: solid var(--text-second) 1px;
   appearance: textfield;
 }
 .main-input:focus {
@@ -128,4 +130,120 @@ body {
 .main-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+#open-setting {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  top: 10px;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: var(--text-second);
+  border-radius: 5px;
+}
+
+#open-setting > .icon-holder {
+  position: relative;
+
+  top: 50%;
+  left: 50%;
+  max-width: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+#open-setting > .icon-holder > .bar {
+  width: 2rem;
+  height: 4px;
+  border-radius: 2.5px;
+  background-color: var(--bg-color);
+  margin: 5px 0;
+}
+
+#open-setting > .icon-holder > .bar:nth-child(1) {
+  margin-top: 0;
+}
+
+.settings-window {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10rem);
+  height: calc(100% - 10rem);
+
+  margin: 5rem;
+  padding: 0.5rem;
+
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 10px var(--text-second);
+}
+
+.settings-window > h3 {
+  text-align: center;
+}
+
+#settings-form {
+  padding: 0.5rem;
+  margin: 0 calc(50% / 2);
+  height: calc(100% - 5rem - 1em);
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+#settings-form > .form-section {
+  width: calc(100% - 20px);
+  margin: 5px 5px;
+  padding: 0.3rem;
+  background-color: var(--bg-color);
+}
+
+#settings-form td {
+  font-weight: bold;
+}
+
+/* #settings-form tr > td:nth-child(1) {
+  max-width: 25%;
+  width: auto;
+} */
+
+#settings-form > input[type="submit"] {
+  width: 100%;
+  border: none;
+  background-color: var(--accent);
+  border-radius: 3px;
+  color: var(--bg-color);
+  font-weight: bold;
+  padding: 0.3em 0;
+}
+
+#settings-form input[type="number"] {
+  width: 95%;
+}
+
+#settings-form input[type="number"]:focus {
+  outline: none;
+}
+#settings-form input[type="number"]::-webkit-inner-spin-button,
+#settings-form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #ffcccc;
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+
+  #open-setting {
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+  }
 }
